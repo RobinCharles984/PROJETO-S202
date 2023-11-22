@@ -1,0 +1,45 @@
+[
+    {
+        "id": 1,
+        "bichos": 10,
+        "npcs": 2,
+        "tempo_medio_mnts": 5
+    },
+    {
+        "id": 2,
+        "bichos": 15,
+        "npcs": 1,
+        "tempo_medio_mnts": 7
+    },
+    {
+        "id": 3,
+        "bichos": 20,
+        "npcs": 3,
+        "tempo_medio_mnts": 15
+    },
+    {
+        "id": 4,
+        "bichos": 23,
+        "npcs": 0,
+        "tempo_medio_mnts": 8
+    },
+    {
+        "id": 5,
+        "bichos": 30,
+        "npcs": 1,
+        "tempo_medio_mnts": 13
+    },
+    {
+        "id": 6,
+        "bichos": 27,
+        "npcs": 0,
+        "tempo_medio_mnts": 10
+    },
+    {
+        "id": 7,
+        "bichos": 10,
+        "npcs": 2,
+        "tempo_medio_mnts": 5
+    }
+
+]
