@@ -92,7 +92,7 @@ python main.py
 ## Usage
 
 WORK IN PROGRESS!!
-<img src="images/workinprogress.png" alt="worklogo" width="326" height="196">
+<img src="images/workinprogress.jpg" alt="worklogo" width="326" height="196">
 
 ## Roadmap
 
