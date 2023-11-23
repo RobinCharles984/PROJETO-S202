@@ -54,7 +54,7 @@ The project is being created for Database class, using Python with a database, w
 
 ## Getting Started
 
-Use VSCode <img src="images/vscode.png" alt="vscodelogo" width="80" height="80"> with Python <img src="images/vscode.png" alt="vscodelogo" width="80" height="80">
+Use VSCode <img src="images/vscode.png" alt="vscodelogo" width="35" height="35"> with Python <img src="images/python.png" alt="vscodelogo" width="35" height="35">
 
 ### Prerequisites
 
