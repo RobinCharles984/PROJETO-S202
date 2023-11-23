@@ -1,6 +1,6 @@
 <br/>
 <p align="center">
-  <a href="https://github.com/Tales Machado/Project-S202-TextGame">
+  <a href="https://github.com/RobinCharles984/Project-S202-TextGame">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -8,18 +8,18 @@
     Adventure Text Game
     <br/>
     <br/>
-    <a href="https://github.com/Tales Machado/Project-S202-TextGame"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/RobinCharles984/Project-S202-TextGame"><strong>Explore the docs »</strong></a>
     <br/>
     <br/>
-    <a href="https://github.com/Tales Machado/Project-S202-TextGame">View Demo</a>
+    <a href="https://github.com/RobinCharles984/Project-S202-TextGame">View Demo</a>
     .
-    <a href="https://github.com/Tales Machado/Project-S202-TextGame/issues">Report Bug</a>
+    <a href="https://github.com/RobinCharles984/Project-S202-TextGame/issues">Report Bug</a>
     .
-    <a href="https://github.com/Tales Machado/Project-S202-TextGame/issues">Request Feature</a>
+    <a href="https://github.com/RobinCharles984/Project-S202-TextGame/issues">Request Feature</a>
   </p>
 </p>
 
-![Downloads](https://img.shields.io/github/downloads/Tales Machado/Project-S202-TextGame/total) ![Contributors](https://img.shields.io/github/contributors/Tales Machado/Project-S202-TextGame?color=dark-green) ![Issues](https://img.shields.io/github/issues/Tales Machado/Project-S202-TextGame) ![License](https://img.shields.io/github/license/Tales Machado/Project-S202-TextGame) 
+![Downloads](https://img.shields.io/github/downloads/RobinCharles984/Project-S202-TextGame/total) ![Contributors](https://img.shields.io/github/contributors/RobinCharles984/Project-S202-TextGame?color=dark-green) ![Issues](https://img.shields.io/github/issues/RobinCharles984/Project-S202-TextGame) ![License](https://img.shields.io/github/license/RobinCharles984/Project-S202-TextGame) 
 
 ## Table Of Contents
 
@@ -54,7 +54,7 @@ The project is being created for Database class, using Python with a database, w
 
 ## Getting Started
 
-Use [VSCode](images/vscode.png) with [Python](images/python.png)
+Use VSCode <img src="images/vscode.png" alt="vscodelogo" width="80" height="80"> with Python <img src="images/vscode.png" alt="vscodelogo" width="80" height="80">
 
 ### Prerequisites
 
@@ -92,19 +92,19 @@ python main.py
 ## Usage
 
 WORK IN PROGRESS!!
-![Work In Progress](images/workinprogress.png)
+<img src="images/workinprogress" alt="worklogo" width="326" height="196">
 
 ## Roadmap
 
-See the [open issues](https://github.com/Tales Machado/Project-S202-TextGame/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/RobinCharles984/Project-S202-TextGame/issues) for a list of proposed features (and known issues).
 
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-* If you have suggestions for adding or removing projects, feel free to [open an issue](https://github.com/Tales Machado/Project-S202-TextGame/issues/new) to discuss it, or directly create a pull request after you edit the *README.md* file with necessary changes.
+* If you have suggestions for adding or removing projects, feel free to [open an issue](https://github.com/RobinCharles984/Project-S202-TextGame/issues/new) to discuss it, or directly create a pull request after you edit the *README.md* file with necessary changes.
 * Please make sure you check your spelling and grammar.
 * Create individual PR for each suggestion.
-* Please also read through the [Code Of Conduct](https://github.com/Tales Machado/Project-S202-TextGame/blob/main/CODE_OF_CONDUCT.md) before posting your first idea as well.
+* Please also read through the [Code Of Conduct](https://github.com/RobinCharles984/Project-S202-TextGame/blob/main/CODE_OF_CONDUCT.md) before posting your first idea as well.
 
 ### Creating A Pull Request
 
