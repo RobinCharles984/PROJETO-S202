@@ -1,7 +1,7 @@
 <br/>
 <p align="center">
   <a href="https://github.com/RobinCharles984/Project-S202-TextGame">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/logo.png" alt="Logo" width="400" height="100">
   </a>
 
   <p align="center">
@@ -92,7 +92,7 @@ python main.py
 ## Usage
 
 WORK IN PROGRESS!!
-<img src="images/workinprogress" alt="worklogo" width="326" height="196">
+<img src="images/workinprogress.png" alt="worklogo" width="326" height="196">
 
 ## Roadmap
 
