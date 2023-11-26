@@ -7,7 +7,7 @@ class SearchPath :
     def getPathById(self, id: int):
         try:
             res = self.db.collection.find_one({"id": id})
-            print(f"Caminho achado: {res}")
+            print(f"Caminho encontrado: {res}")
             return res
         except Exception as e:
             print(f"Caminho nao encontrado: {e}")
