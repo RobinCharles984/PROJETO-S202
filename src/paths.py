@@ -3,3 +3,6 @@ class Path:
         self.id = id
         self.enemies = enemies
         self.npcs = npcs
+
+    def get_enemies(self):
+        return self.enemies
