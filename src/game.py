@@ -6,13 +6,11 @@ from charactersModel import CharactersModel
 from random import Random
 from characters import Fight
 
-#a cada nivel a quantidade necessaria de xp dobra~
-#nivel 2 = 100xp
 #após cada caminho escolhido, sugerir 3 outros caminhos
 
-#db_path = Database('projeto', 'caminhos')
-db_character = Database('projeto', 'personagem')
-#characterModel = CharactersModel(db_character)
+db_path = Database('projeto', 'caminhos')
+db_character = Database('projeto', 'personagens')
+characterModel = CharactersModel(db_character)
 
 random = Random()
 
@@ -49,7 +47,6 @@ class Game:
                 kills=0,
                 paths=[]
             )
-            """
             characterModel.create_character(
                 player.hp,
                 player.xp,
@@ -59,14 +56,14 @@ class Game:
                 player.dfs,
                 player.kills
             )
-            characterModel.show_player_data(_input)
+            player.show_stats()
         
         else:
-            _input = str(input("Insira o nome do s0eu peronagem a ser buscado no bando de dados:"))
+            _input = str(input("Insira o nome do seu peronagem a ser buscado no bando de dados: "))
             character = characterModel.show_player_data(_input)
             
             player = Player()
-        """
+    
         ##Story starts
 
         #Path 0
@@ -76,7 +73,7 @@ class Game:
         print("Tem um caminho a sua frente, o que deseja fazer?")
         player.paths = paths[0]
         while(True):
-            _input = str(input("(Comandos: Continuar, Sair)"))
+            _input = str(input("(Comandos: Continuar, Sair): "))
             if _input == "Continuar":
                 player.paths = paths[1]
                 break
@@ -97,7 +94,7 @@ class Game:
                 print("-------------------------------------------------")
                 print("Voce ve mais um caminho a sua frente e uma pessoa andando pela floresta.")
                 print("O que deseja fazer?")
-                _input = str(input("(Comandos: Continuar, Conversar, Sair)"))
+                _input = str(input("(Comandos: Continuar, Conversar, Sair): "))
                 if _input == "Continuar":
                     player.paths = paths[2]
                     break
@@ -110,12 +107,11 @@ class Game:
                 else:
                     print("Comando nao encontrado, tente novamente!")
         
-        else:
-            while(True):
+        while(True):
                 print("-------------------------------------------------")
                 print("Voce ve mais um caminho a sua frente.")
                 print("O que deseja fazer?")
-                _input = str(input("(Comandos: Continuar, Sair)"))
+                _input = str(input("(Comandos: Continuar, Sair): "))
                 if _input == "Continuar":
                     player.paths = paths[2]
                     break
@@ -149,8 +145,7 @@ class Game:
                 else:
                     print("Comando nao encontrado, tente novamente!")
         
-        else:
-            while(True):
+        while(True):
                 print("-------------------------------------------------")
                 print("Voce ve mais um caminho a sua frente.")
                 print("O que deseja fazer?")
@@ -188,8 +183,7 @@ class Game:
                 else:
                     print("Comando nao encontrado, tente novamente!")
         
-        else:
-            while(True):
+        while(True):
                 print("-------------------------------------------------")
                 print("Voce ve mais um caminho a sua frente.")
                 print("O que deseja fazer?")
@@ -227,8 +221,7 @@ class Game:
                 else:
                     print("Comando nao encontrado, tente novamente!")
         
-        else:
-            while(True):
+        while(True):
                 print("-------------------------------------------------")
                 print("Voce ve mais um caminho a sua frente.")
                 print("O que deseja fazer?")
@@ -266,8 +259,7 @@ class Game:
                 else:
                     print("Comando nao encontrado, tente novamente!")
         
-        else:
-            while(True):
+        while(True):
                 print("-------------------------------------------------")
                 print("Voce ve mais um caminho a sua frente.")
                 print("O que deseja fazer?")
@@ -279,6 +271,50 @@ class Game:
                     exit(1)
                 else:
                     print("Comando nao encontrado, tente novamente!") 
+
+        #Path 6
+        if(player.paths == paths[6] and paths[6].get_enemies() != None):
+            for i in str(paths[6].get_enemies()):
+                enemy = Enemy(hp=random.randint(30, 50), xp=random.randint(100, 150), name="Little Tiger", dmg=random.randint(20, 35), dfs=random.randint(10, 18))
+                enemy.spawn()
+                Fight(enemy, player)
+        
+        if(player.paths == paths[6] and paths[6].npcs != None):
+            while(True):
+                print("-------------------------------------------------")
+                print("Voce ve mais um caminho a sua frente e uma pessoa andando pela floresta.")
+                print("O que deseja fazer?")
+                _input = str(input("(Comandos: Continuar, Conversar, Sair): "))
+                if _input == "Continuar":
+                    player.paths = paths[7]
+                    break
+                if _input == "Conversar":
+                    npc = Npc("Mondial")
+                    npc.message("Ventania!")
+                    break
+                if _input == "Sair":
+                    exit(1)
+                else:
+                    print("Comando nao encontrado, tente novamente!")
+        
+        while(True):
+                print("-------------------------------------------------")
+                print("Voce ve mais um caminho a sua frente.")
+                print("O que deseja fazer?")
+                _input = str(input("(Comandos: Continuar, Sair): "))
+                if _input == "Continuar":
+                    player.paths = paths[6]
+                    break
+                if _input == "Sair":
+                    exit(1)
+                else:
+                    print("Comando nao encontrado, tente novamente!") 
+
+        #Path 7 - Ending
+        print("Voce chegou no portao de uma cidade, a cidade parece tranquila... mas vazia!")
+        print("O unico som que ecoa eh apenas o vento assobiando nas janelas das casas vazias... O que aconteceu aqui?!")
+        print("-------------------------------------------------")
+        
 # #fazer busca no bd pelo id
 # if caminho_escolhido == caminho1.id:
 #     personagem1.caminhos_escolhidos.append(caminho_escolhido)
