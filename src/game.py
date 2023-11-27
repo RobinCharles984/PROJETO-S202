@@ -62,9 +62,10 @@ class Game:
         
         else:
             _input = str(input("Insira o nome do seu peronagem a ser buscado no bando de dados: "))
-            character = characterModel.show_player_data(_input)
-            
-            player = Player()
+            p = characterModel.find_player(_input)
+            id = p['_id']
+            player = Player(p['hp'],p['xp'], p['level'], p['name'], p['dmg'], p['dfs'], p['kills'],[])
+            player.show_stats()
     
         ##Story starts
 
@@ -90,6 +91,7 @@ class Game:
                 enemy= Enemy(hp=random.randint(3, 6), xp=random.randint(30, 80), name="Goblin", dmg=random.randint(4, 8), dfs=random.randint(0, 10))
                 enemy.spawn()
                 Fight(enemy, player)
+                characterModel.update_character(id, player.hp, player.xp, player.level, player.dmg, player.dfs, player.kills)
         
         if(player.paths == paths[1] and paths[1].npcs != None):
             while(True):
@@ -128,6 +130,7 @@ class Game:
                 enemy = Enemy(hp=random.randint(5, 7), xp=random.randint(50, 100), name="PP Leao", dmg=random.randint(3, 10), dfs=random.randint(2, 7))
                 enemy.spawn()
                 Fight(enemy, player)
+                characterModel.update_character(id, player.hp, player.xp, player.level, player.dmg, player.dfs, player.kills)
         
         if(player.paths == paths[2] and paths[2].npcs != None):
             while(True):
@@ -166,6 +169,7 @@ class Game:
                 enemy = Enemy(hp=random.randint(5, 7), xp=random.randint(50, 100), name="Jean", dmg=random.randint(3, 10), dfs=random.randint(2, 7))
                 enemy.spawn()
                 Fight(enemy, player)
+                characterModel.update_character(id, player.hp, player.xp, player.level, player.dmg, player.dfs, player.kills)
         
         if(player.paths == paths[3] and paths[3].npcs != None):
             while(True):
@@ -204,6 +208,7 @@ class Game:
                 enemy = Enemy(hp=random.randint(10, 20), xp=random.randint(70, 120), name="Aranha", dmg=random.randint(10, 15), dfs=random.randint(8, 13))
                 enemy.spawn()
                 Fight(enemy, player)
+                characterModel.update_character(id, player.hp, player.xp, player.level, player.dmg, player.dfs, player.kills)
         
         if(player.paths == paths[4] and paths[4].npcs != None):
             while(True):
@@ -242,6 +247,7 @@ class Game:
                 enemy = Enemy(hp=random.randint(30, 50), xp=random.randint(100, 150), name="Little Tiger", dmg=random.randint(20, 35), dfs=random.randint(10, 18))
                 enemy.spawn()
                 Fight(enemy, player)
+                characterModel.update_character(id, player.hp, player.xp, player.level, player.dmg, player.dfs, player.kills)
         
         if(player.paths == paths[5] and paths[5].npcs != None):
             while(True):
@@ -280,6 +286,7 @@ class Game:
                 enemy = Enemy(hp=random.randint(30, 50), xp=random.randint(100, 150), name="Little Tiger", dmg=random.randint(20, 35), dfs=random.randint(10, 18))
                 enemy.spawn()
                 Fight(enemy, player)
+                characterModel.update_character(id, player.hp, player.xp, player.level, player.dmg, player.dfs, player.kills)
         
         if(player.paths == paths[6] and paths[6].npcs != None):
             while(True):
