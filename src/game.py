@@ -1,3 +1,4 @@
+##imports
 #from searchPath import SearchPath
 from database import Database
 from paths import Path
@@ -6,27 +7,27 @@ from charactersModel import CharactersModel
 from random import Random
 from characters import Fight
 
-#após cada caminho escolhido, sugerir 3 outros caminhos
-
-db_path = Database('projeto', 'caminhos')
-db_character = Database('projeto', 'personagens')
+db_path = Database('projeto_final', 'caminhos')
+db_character = Database('projeto_final', 'personagens')
 characterModel = CharactersModel(db_character)
 
 random = Random()
 
 #buscar = SearchPath(db_path)
 
+#class game
 class Game:
     def __init__(self):
         pass
 
+    #wholegame
     def launch(self):
         _input = str(input("Deseja criar seu personagem: (S/N)"))  
 
-        enemy = []
+        enemy = []#creating enemy array
 
-        paths = [
-            Path(1, 0, 0),
+        paths = [ 
+            Path(1, 0, 0),                  #Creating paths [id, enemies count(random), npcs(rando 0-1)]
             Path(2, 0, 1),
             Path(3, 1, 1),
             Path(4, random.randint(0, 2), random.randint(0, 1)),
@@ -35,6 +36,7 @@ class Game:
             Path(7, random.randint(0, 1), 0)   
         ]
        
+       #Creating player and inserting at database
         if _input == "S":
             _input = str(input("Insira o nome do seu personagem: "))
             player = Player(

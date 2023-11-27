@@ -24,7 +24,7 @@ class CharactersModel:
             return None
         
 
-    def update_character(self, id: str, hp: int, xp: int, level: int, dmg: int, dfs: int, kills: int):
+    def update_character(id: str, hp: int, xp: int, level: int, dmg: int, dfs: int, kills: int):
         try:
             res = self.db.collection.update_one({
                 "_id": ObjectId(id), 

@@ -5,13 +5,16 @@
 
 #imports
 from random import Random
+from database import Database
+from charactersModel import CharactersModel
 
 #variable
 random = Random()
 hp_temp = 0
+db = Database("projeto_final", "personagens")
+charactersModel = CharactersModel(db)
 
 class Player:
-
     def __init__(self, hp: int, xp: int, level: int, name: str, dmg: int, dfs: int, kills: int, paths: int = None):
         self.hp = hp
         self.xp = xp
@@ -22,17 +25,20 @@ class Player:
         self.kills = kills
         self.paths = paths
         hp_temp = self.hp
-        
+    
+    
     def get_xp(self, xp):
         xp_levelup = 100
         self.xp += xp
-        if self.xp >= xp_levelup:
+        if self.xp >= xp_levelup: ##Level up system
             self.xp = 0
             self.level += 1
             xp_levelup *= 2
             self.hp += (hp_temp + self.level)
             self.dmg += self.level
             self.dfs += self.level
+            ##URGENT FIX - how to get id
+            ##charactersModel.update_character(self.id, self.hp, self.xp, self.level, self.dmg, self.dfs, self.kills)
             print("Subiu de nivel!!!")
             print("Nome: ", self.name)
             print("HP: ", self.hp)
@@ -49,13 +55,13 @@ class Player:
         print("Defense: ", self.dfs)
         print("Kills: ", self.kills)
 
-    def die():
+    def die(self):
         if self.hp <= 0:
             self.hp = 0
-            exit()
             print("-----------------------------------------")
             print("Voce morreu!")
             print("----------------GAME OVER----------------")
+            exit()
         
 
 ##Enemies will attack player when they are at the same path and after every action
@@ -70,6 +76,7 @@ class Enemy:
     def spawn(self):
         print("Um ", self.name, " apareceu!")
 
+#Fight system
 class Fight():
     def __init__(self, e:Enemy, p: Player):
         while(e.hp != 0 and p.hp != 0):
@@ -83,6 +90,9 @@ class Fight():
                 print(e.name, " atacou e voce tomou ", e.dmg, "!")
                 print("-------------------------------------------------")
                 p.show_stats()
+                if p.hp <= 0:
+                    p.hp = 0
+                    p.die()
             if command == "Defender":
                 damage = (e.dmg - p.dfs)
                 p.hp -= damage
@@ -98,11 +108,6 @@ class Fight():
                 print("-------------------------------------------------")
                 p.get_xp(e.xp)
                 break
-            if p.hp <= 0:
-                p.hp = 0
-                exit(1)
-
-            p.die()
 
 #NPC's are interactive, can talk with player
 #There's no way to defeat a NPC
