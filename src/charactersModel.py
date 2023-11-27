@@ -24,11 +24,11 @@ class CharactersModel:
             return None
         
 
-    def update_character(id: str, hp: int, xp: int, level: int, dmg: int, dfs: int, kills: int):
+    def update_character(self, id: str, hp: int, xp: int, level: int, dmg: int, dfs: int, kills: int):
         try:
             res = self.db.collection.update_one({
-                "_id": ObjectId(id), 
-                "$set": {
+                "_id": ObjectId(id)}, 
+                {"$set": {
                     "hp": hp,
                     "xp": xp, 
                     "level": level, 
@@ -40,6 +40,7 @@ class CharactersModel:
         except Exception as e:
             print(f"Ocorreu um erro atualizando player: {e}")
             return None
+        
         
     
     def show_player_data(self, id: str):
@@ -64,6 +65,14 @@ class CharactersModel:
             print(f"Ocorreu um erro deletando o jogador: {e}")
             return None  
 
+
+    def find_player(self, name:str):
+        try:
+            res = self.db.collection.find_one({"name": name})
+            return res
+        except Exception as e:
+            print(f"Ocorreu um erro procurando jogador: {e}")
+        
     def find_all_characters(self):
         try:
             res = self.db.collection.find()
