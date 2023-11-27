@@ -53,7 +53,7 @@ class CharactersModel:
             print("Damage:", res["dmg"])
             print("Defense:", res["dfs"])
             print("Kills:", res["kills"])
-
+            return res["_id"]
         except Exception as e:
             print(f"Ocorreu um erro mostrando os dados do jogador: {e}")
             
