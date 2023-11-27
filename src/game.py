@@ -48,7 +48,7 @@ class Game:
                 kills=0,
                 paths=[]
             )
-            characterModel.create_character(
+            id = characterModel.create_character(
                 player.hp,
                 player.xp,
                 player.level,
