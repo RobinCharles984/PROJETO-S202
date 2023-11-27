@@ -13,7 +13,6 @@ characterModel = CharactersModel(db_character)
 
 random = Random()
 
-#buscar = SearchPath(db_path)
 
 #class game
 class Game:
@@ -324,19 +323,3 @@ class Game:
         print("O unico som que ecoa eh apenas o vento assobiando nas janelas das casas vazias... O que aconteceu aqui?!")
         print("-------------------------------------------------")
         
-# #fazer busca no bd pelo id
-# if caminho_escolhido == caminho1.id:
-#     personagem1.caminhos_escolhidos.append(caminho_escolhido)
-#     personagem1.bichos_abatidos += caminho1.bichos
-#     personagem1.xp += caminho1.bichos *10
-#     if personagem1.xp >= xp_necessario:
-#         personagem1.level_up()
-#         xp_necessario *=2
-
-
-# print(personagem1.nick)
-# print(personagem1.bichos_abatidos)
-# print(personagem1.nivel)
-# print(personagem1.xp)
-# print(personagem1.caminhos_escolhidos)
-# print(xp_necessario)
