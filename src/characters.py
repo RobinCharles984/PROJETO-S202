@@ -10,7 +10,6 @@ from charactersModel import CharactersModel
 
 #variable
 random = Random()
-hp_temp = 0
 db = Database("projeto_final", "personagens")
 charactersModel = CharactersModel(db)
 
@@ -24,7 +23,6 @@ class Player:
         self.dfs = dfs
         self.kills = kills
         self.paths = paths
-        hp_temp = self.hp
     
     
     def get_xp(self, xp):
