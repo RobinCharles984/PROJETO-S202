@@ -76,6 +76,8 @@ class CharactersModel:
     def find_all_characters(self):
         try:
             res = self.db.collection.find()
+            for r in res:
+                print("Player: ", r["name"])
             return res
         except Exception as e:
             print(f"Ocorreu um erro mostrando os jogos existentes: {e}")
