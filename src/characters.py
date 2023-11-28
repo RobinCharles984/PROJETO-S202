@@ -37,8 +37,7 @@ class Player:
             self.hp += (hp_temp + self.level)
             self.dmg += self.level
             self.dfs += self.level
-            ##URGENT FIX - how to get id
-            ##charactersModel.update_character(self.id, self.hp, self.xp, self.level, self.dmg, self.dfs, self.kills)
+            charactersModel.update_character(self.name, self.hp, self.xp, self.level, self.dmg, self.dfs, self.kills)
             print("Subiu de nivel!!!")
             print("Nome: ", self.name)
             print("HP: ", self.hp)
@@ -58,6 +57,7 @@ class Player:
     def die(self):
         if self.hp <= 0:
             self.hp = 0
+            charactersModel.delete_player(self.name)
             print("-----------------------------------------")
             print("Voce morreu!")
             print("----------------GAME OVER----------------")

@@ -21,7 +21,7 @@ class Game:
 
     #wholegame
     def launch(self):
-        _input = str(input("Deseja criar seu personagem: (S/N)"))  
+        _input = str(input("O que deseja fazer? (1-Criar personagem,    2-Pesquisar personagem,     3- Mostrar todos os personagens): "))  
 
         enemy = []#creating enemy array
 
@@ -36,7 +36,7 @@ class Game:
         ]
        
        #Creating player and inserting at database
-        if _input == "S":
+        if _input == "1":
             _input = str(input("Insira o nome do seu personagem: "))
             player = Player(
                 hp=random.randint(10, 25),
@@ -59,13 +59,18 @@ class Game:
             )
             player.show_stats()
         
-        else:
+        if _input == 2:
             _input = str(input("Insira o nome do seu peronagem a ser buscado no bando de dados: "))
             p = characterModel.find_player(_input)
             id = p['_id']
             player = Player(p['hp'],p['xp'], p['level'], p['name'], p['dmg'], p['dfs'], p['kills'],[])
             player.show_stats()
-    
+
+        else:
+            findAllCharacters = characterModel.find_all_characters()
+            player = Player(p['hp'],p['xp'], p['level'], p['name'], p['dmg'], p['dfs'], p['kills'],[])
+            print(p.name)
+            exit()    
         ##Story starts
 
         #Path 0
