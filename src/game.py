@@ -66,11 +66,9 @@ class Game:
             player = Player(p['hp'],p['xp'], p['level'], p['name'], p['dmg'], p['dfs'], p['kills'],[])
             player.show_stats()
 
-        else:
+        if _input == 3:
             findAllCharacters = characterModel.find_all_characters()
-            player = Player(p['hp'],p['xp'], p['level'], p['name'], p['dmg'], p['dfs'], p['kills'],[])
-            print(p.name)
-            exit()    
+
         ##Story starts
 
         #Path 0

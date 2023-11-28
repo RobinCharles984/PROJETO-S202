@@ -91,8 +91,7 @@ python main.py
 
 ## Usage
 
-WORK IN PROGRESS!!
-<img src="images/workinprogress.jpg" alt="worklogo" width="326" height="196">
+[Use this link to see the tutorial](https://www.youtube.com/watch?v=6HLzeeU0_V0)
 
 ## Roadmap
 
