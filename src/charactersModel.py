@@ -57,9 +57,9 @@ class CharactersModel:
         except Exception as e:
             print(f"Ocorreu um erro mostrando os dados do jogador: {e}")
             
-    def delete_player(self, id: str):
+    def delete_player(self, name: str):
         try:
-            res = self.db.collection.delete_one({"_id": ObjectId(id)})
+            res = self.db.collection.delete_one({"name": name})
             return res.deleted_count
         except Exception as e:
             print(f"Ocorreu um erro deletando o jogador: {e}")
