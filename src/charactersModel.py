@@ -18,7 +18,6 @@ class CharactersModel:
                 })
             print("Player criado!")
             return res.inserted_id 
-        #retorna o id -> salvar em uma variavel para utilizar nas outras funções
         except Exception as e:
             print(f"Ocorreu um erro criando player: {e}")
             return None
